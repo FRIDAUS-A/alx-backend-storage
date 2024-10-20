@@ -1,6 +1,6 @@
 -- Creates a table users with below attributes
 -- id, integer, never null, auto increment and primary key
--- email, string (255 characters), never null and unique
+-- email, string (255 characters), never null and UNIQUE
 -- name, string (255 characters)
 -- If table exists, script will not fail, can be executed on any database
 
