@@ -8,6 +8,13 @@ from typing import List
 
 
 def schools_by_topic(mongo_collection: MongoClient, topic: str) -> List:
+    """
+        Args:
+            mongo_collection: collection instance
+            topic: topic to check
+        Return:
+            returns list of documents with the topic
+    """
     schools_by_topic = []
     for school in mongo_collection.find():
         if school.get("topics") and topic in school.get("topics"):
