@@ -5,6 +5,7 @@
 import redis
 import uuid
 from typing import Union
+type Store = Union[str, int, bytes, float]
 
 
 class Cache:
@@ -18,7 +19,7 @@ class Cache:
         self._redis = redis.Redis()
         self._redis.flushdb(True)
 
-    def store(self, data: Union[str, int, bytes, float]) -> str:
+    def store(self, data: Store) -> Store:
         """
             store data in the random key generated
         """
