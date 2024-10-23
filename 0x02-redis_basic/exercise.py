@@ -11,7 +11,7 @@ class Cache:
     """
      A cache class
     """
-    def __init__(self) -> None:
+    def __init__(self):
         """
             initialize the class Cache
         """
@@ -19,7 +19,7 @@ class Cache:
         self._redis.flushdb(True)
 
     def store(self, data: Union[str, int, bytes, float]
-              ) -> Union[str, int, bytes, float]:
+              ) -> str:
         """
             store data in the random key generated
         """
